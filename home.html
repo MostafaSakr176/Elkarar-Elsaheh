@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elkarar Elsaheh - Decision Making Platform">
+    <title>Elkarar Elsaheh</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Mansalva&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav
+            class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl flex justify-between items-center py-4 relative">
+            <a href="#" class="w-full lg:w-auto hidden lg:block">
+                <img src="assets/images/logo.png" alt="logo" class="w-[160px]">
+            </a>
+
+            <a href="#" class="w-full lg:w-auto block lg:hidden">
+                <img src="assets/images/logo-mobile.png" alt="logo" class="w-[80px]">
+            </a>
+
+            <!-- Navigation Links - Desktop -->
+            <ul class="hidden lg:flex gap-4">
+                <li>
+                    <a href="#" class="text-[16px] text-[#00386C] font-[400] pb-3 px-2 nav-link active">Home Page</a>
+                </li>
+                <li>
+                    <a href="#" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link">About Us</a>
+                </li>
+                <li>
+                    <a href="#" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link">Lorem ipsom</a>
+                </li>
+            </ul>
+
+            <div class="nav-container flex items-center justify-center gap-4">
+                <div class="language-selector">
+                    <button class="lang-btn flex items-center gap-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.00001 3H9.00001C7.05001 8.84 7.05001 15.16 9.00001 21H8.00001" stroke="#121212"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 3C16.95 8.84 16.95 15.16 15 21" stroke="#121212" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16" stroke="#121212" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 9C8.84 7.05 15.16 7.05 21 9" stroke="#121212" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="current-lang text-[16px] text-[#121212]">ENG</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown text-center">
+                        <a href="#" class="lang-option" data-lang="ar">عربي</a>
+                        <a href="#" class="lang-option" data-lang="en">ENG</a>
+                    </div>
+                </div>
+                <button
+                    class=" hidden lg:block bg-transparent cursor-pointer text-[18px] font-[400] border border-[#00386C] text-[#00386C] px-5 py-2 rounded-md hover:bg-[#00386C] hover:text-white transition-all duration-300">تواصل
+                    معنا</button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-[#00386C] mobile-menu-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 7H21" stroke="#00386C" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M3 12H21" stroke="#00386C" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M3 17H21" stroke="#00386C" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <!-- Backdrop -->
+            <div class="backdrop fixed inset-0 bg-black/70 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-[9998]"></div>
+
+            <!-- Mobile Menu - Hidden by default -->
+            <div
+                class="mobile-menu fixed inset-0 bottom-[30vh] bg-white transform -translate-y-full transition-transform duration-300 ease-in-out lg:hidden z-[9999]">
+                <div class="bg-white ">
+                    <div class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-4 flex justify-between items-center mb-8">
+                        <a href="#" class="w-full lg:w-auto block lg:hidden">
+                            <img src="assets/images/logo-mobile.png" alt="logo" class="w-[80px]">
+                        </a>                        <div class="flex items-center gap-4">
+
+                            <div class="language-selector">
+                                <button class="lang-btn flex items-center gap-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                            stroke="#121212" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M8.00001 3H9.00001C7.05001 8.84 7.05001 15.16 9.00001 21H8.00001"
+                                            stroke="#121212" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M15 3C16.95 8.84 16.95 15.16 15 21" stroke="#121212" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16" stroke="#121212"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M3 9C8.84 7.05 15.16 7.05 21 9" stroke="#121212" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="current-lang text-[16px] text-[#121212]">ENG</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="lang-dropdown text-center">
+                                    <a href="#" class="lang-option" data-lang="ar">عربي</a>
+                                    <a href="#" class="lang-option" data-lang="en">ENG</a>
+                                </div>
+                            </div>
+                            <button class="mobile-menu-close text-[#00386C]">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18" stroke="#00386C" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M6 6L18 18" stroke="#00386C" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <ul class="flex flex-col justify-center items-center gap-6">
+                        <li class="pb-4">
+                            <a href="#" class="text-[16px] text-[#00386C] font-[400] pb-4 px-2 nav-link active">Home
+                                Page</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="#" class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link">About Us</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="#" class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link">Lorem ipsom</a>
+                        </li>
+                        <li>
+                            <button
+                                class="bg-transparent w-max cursor-pointer text-[18px] font-[400] border border-[#00386C] text-[#00386C] px-5 py-2 rounded-md hover:bg-[#00386C] hover:text-white transition-all duration-300">تواصل
+                                معنا</button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="md:h-[90vh] h-[75vh] relative bg-black">
+        <div class="hero-slider h-[90vh] relative">
+            <div class="relative h-full w-full">
+                <!-- Dark overlay -->
+                <div class="absolute inset-0 bg-black/70 z-[1]"></div>
+                <img src="assets/images/8786c557caa65a4fa23bce659544c67d.jfif" alt="" srcset=""
+                    class="w-full h-full object-cover">
+                <div
+                    class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-full text-center flex flex-col gap-4 items-center justify-center z-[2] w-[90%] mx-auto md:max-w-1xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl">
+                    <h1 class="md:text-[48px] text-[24px] text-[#fff] font-[400] md:leading-[76.8px] leading-[40px]">An
+                        exceptional customer experience starts with the right decision!</h1>
+                    <p class="md:text-[18px] text-[14px] text-[#fff] font-[400] md:leading-[28px] leading-[20px]">We
+                        offer innovative solutions and specialized consulting to enhance customer satisfaction and build
+                        sustainable exceptional experiences. Through advanced strategies, precise performance
+                        measurement, and cutting-edge technologies, we optimize every touchpoint between you and your
+                        customers, ensuring long-term loyalty and successful partnerships.</p>
+                    <button
+                        class="bg-[#00386C] text-white md:text-[24px] text-[18px] font-[400] md:leading-[36px] leading-[24px] border border-[#86BDF0] px-6 py-3 rounded-[12px] hover:bg-[#00386C] hover:text-white transition-all duration-300">Discover
+                        Our Services</button>
+                </div>
+            </div>
+            <div class="relative h-full w-full">
+                <!-- Dark overlay -->
+                <div class="absolute inset-0 bg-black/70 z-[1]"></div>
+                <img src="assets/images/cbe1aca97ab810fc135fd5e3bc094aed.jfif" alt="" srcset=""
+                    class="w-full h-full object-cover">
+                <div
+                    class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-full text-center flex flex-col gap-4 items-center justify-center z-[2] w-[90%] mx-auto md:max-w-1xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl">
+                    <h1 class="md:text-[48px] text-[24px] text-[#fff] font-[400] md:leading-[76.8px] leading-[40px]">An
+                        exceptional customer experience starts with the right decision!</h1>
+                    <p class="md:text-[18px] text-[14px] text-[#fff] font-[400] md:leading-[28px] leading-[20px]">We
+                        offer innovative solutions and specialized consulting to enhance customer satisfaction and build
+                        sustainable exceptional experiences. Through advanced strategies, precise performance
+                        measurement, and cutting-edge technologies, we optimize every touchpoint between you and your
+                        customers, ensuring long-term loyalty and successful partnerships.</p>
+                    <button
+                        class="bg-[#00386C] text-white md:text-[24px] text-[18px] font-[400] md:leading-[36px] leading-[24px] border border-[#86BDF0] px-6 py-3 rounded-[12px] hover:bg-[#00386C] hover:text-white transition-all duration-300">Discover
+                        Our Services</button>
+                </div>
+            </div>
+        </div>
+        <!-- Custom Arrows -->
+        <button
+            class="custom-prev cursor-pointer absolute left-[7%]  top-1/2 transform -translate-y-1/2 z-10 transition-all duration-300 lg:block hidden">
+            <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30.1 8.65997L17.06 21.7C15.52 23.24 15.52 25.76 17.06 27.3L30.1 40.34" stroke="#737373"
+                    stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <button
+            class="custom-next cursor-pointer absolute right-[7%] top-1/2 transform -translate-y-1/2 z-10 transition-all duration-300 lg:block hidden">
+            <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.8999 8.65997L30.9399 21.7C32.4799 23.24 32.4799 25.76 30.9399 27.3L17.8999 40.34"
+                    stroke="#737373" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </main>
+
+    <footer>
+        <!-- Footer content will go here -->
+    </footer>
+
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Start Slick -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"
+        integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/script.js" defer></script>
+</body>
+
+</html>

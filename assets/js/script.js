@@ -1,0 +1,88 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const languageSelector = document.querySelector('.language-selector');
+    const currentLang = document.querySelector('.current-lang');
+    const langOptions = document.querySelectorAll('.lang-option');
+
+    // Handle language option clicks
+    langOptions.forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.preventDefault();
+            const selectedLang = option.textContent;
+            currentLang.textContent = selectedLang;
+            
+            // Here you can add logic to change the website language
+            const lang = option.getAttribute('data-lang');
+            document.documentElement.lang = lang;
+        });
+    });
+
+    // Mobile Menu Functionality
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const backdrop = document.querySelector('.backdrop');
+
+    function openMobileMenu() {
+        mobileMenu.classList.remove('-translate-y-full');
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+        mobileMenu.classList.add('-translate-y-full');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+    }
+
+    mobileMenuButton.addEventListener('click', openMobileMenu);
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+    backdrop.addEventListener('click', closeMobileMenu);
+
+    // Close mobile menu when clicking menu links
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Handle escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeMobileMenu();
+        }
+    });
+
+    // Close dropdown when clicking outside (optional if using CSS hover)
+    /*
+    document.addEventListener('click', (e) => {
+        if (!languageSelector.contains(e.target)) {
+            languageSelector.classList.remove('active');
+        }
+    });
+    */
+
+});
+
+$(document).ready(function () {
+    $('.hero-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: true,
+        prevArrow: $('.custom-prev'),
+        nextArrow: $('.custom-next'),
+        adaptiveHeight: false,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                }
+            }]
+
+    });
+});
