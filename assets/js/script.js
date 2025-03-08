@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 $(document).ready(function () {
+
     $('.hero-slider').slick({
         dots: false,
         infinite: true,
@@ -101,13 +102,38 @@ $(document).ready(function () {
         adaptiveHeight: false,
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 700,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             }
+
         ]
 
     });
+
+
+    $('#courses-btn').click(function () {
+        $(this).addClass('active');
+        $('#workshops-btn').removeClass('active');
+        $('#courses').show();
+        $('#workshops').hide();
+    });
+
+    $('#workshops-btn').click(function () {
+        $(this).addClass('active');
+        $('#courses-btn').removeClass('active');
+        $('#courses').hide();
+        $('#workshops').show();
+    });
+
+
 });

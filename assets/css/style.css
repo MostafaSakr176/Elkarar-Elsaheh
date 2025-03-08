@@ -228,6 +228,16 @@
     margin: 0 10px;
 }
 
+#courses-btn.active{
+    background: #00386C;
+    color: white;
+}
+
+#workshops-btn.active{
+    background: #00386C;
+    color: white;   
+}
+
 @media (max-width: 768px) {
     .hero-slider {
         height: 75vh !important;
