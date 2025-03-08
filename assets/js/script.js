@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const selectedLang = option.textContent;
             currentLang.textContent = selectedLang;
-            
+
             // Here you can add logic to change the website language
             const lang = option.getAttribute('data-lang');
             document.documentElement.lang = lang;
@@ -83,6 +83,31 @@ $(document).ready(function () {
                     dots: true,
                 }
             }]
+
+    });
+
+    $('.our-products').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: $('.our-products-custom-prev'),
+        nextArrow: $('.our-products-custom-next'),
+        adaptiveHeight: false,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
 
     });
 });
