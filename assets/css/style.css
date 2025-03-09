@@ -183,7 +183,7 @@ body{
 .service-card{
     padding: 1.5rem;
     overflow: hidden;
-    height: 250px;
+    height: 270px;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
