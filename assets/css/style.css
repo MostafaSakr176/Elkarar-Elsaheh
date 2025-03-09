@@ -13,6 +13,12 @@
     --white: #ffffff;
 }
 
+body{
+    background-color: #FAFAFA;
+}
+
+
+
 .nav-link {
     position: relative;
     transition: all 0.3s;
@@ -178,12 +184,16 @@
     padding: 1.5rem;
     overflow: hidden;
     height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
     background: transparent;
     transition: all 0.3s ease;
+}
+
+.player .vp-video-wrapper {
+    border-radius: 12px;
 }
 
 .service-card:hover{
@@ -238,6 +248,43 @@
     color: white;   
 }
 
+.our-sevices{
+    display: none;
+}
+
+.our-editions{
+    display: none;
+}
+
+.courses{
+    display: none;
+}
+
+.workshops{
+    display: none;
+}
+
+.news-events{
+    display: none;
+}
+
+.social-icon{
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover{
+    background-color: #3C73A7;
+}
+
+.social-icon svg path{
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover svg path{
+    fill: #fff;
+}
+
 @media (max-width: 768px) {
     .hero-slider {
         height: 75vh !important;
@@ -254,5 +301,64 @@
     .hero-slider .slick-slide>div {
         height: 75vh !important;
     }
+
+    .our-sevices{
+        display: block;
+    }
+    .service-card{
+        background: #00386C;
+        
+    }
+
+    .our-sevices .slick-dots {
+        bottom: -20%;
+    }
+
+    .service-card h3 {
+        transform: translateY(0);
+    }
+    
+    .service-card p {
+        transform: translateY(0);
+    }
+
+    .service-card a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .our-editions{
+        display: block;
+    }
+
+    .our-editions .slick-dots {
+        bottom: -10%;
+    }
+
+    .courses{
+        display: block;
+    }
+
+    .courses .slick-dots {
+        bottom: -10%;
+    }
+
+    .workshops{
+        display: block;
+    }
+
+    .workshops .slick-dots {
+        bottom: -10%;
+    }
+
+    .news-events{
+        display: block;
+    }
+
+    .news-events .slick-dots {
+        bottom: -10%;
+    }
+
+
 }
 

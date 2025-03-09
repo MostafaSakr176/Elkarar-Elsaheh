@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+
+    const loader = document.querySelector('.loading');
+
+    // Create a promise that resolves when all images are loaded
+    const imagePromises = Array.from(document.images).map(img => {
+        if (img.complete) {
+            return Promise.resolve();
+        } else {
+            return new Promise(resolve => {
+                img.addEventListener('load', resolve);
+                img.addEventListener('error', resolve); // Handle error cases too
+            });
+        }
+    });
+
+    // Wait for all images to load
+    Promise.all(imagePromises)
+        .then(() => {
+            // Add fade-out effect
+            loader.style.opacity = '0';
+            loader.style.transition = 'opacity 0.5s ease-out';
+
+            // Remove loader after fade
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        });
+
+
+
+
     const languageSelector = document.querySelector('.language-selector');
     const currentLang = document.querySelector('.current-lang');
     const langOptions = document.querySelectorAll('.lang-option');
@@ -87,6 +119,18 @@ $(document).ready(function () {
 
     });
 
+    $('.our-sevices').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
     $('.our-products').slick({
         dots: false,
         infinite: true,
@@ -118,6 +162,54 @@ $(document).ready(function () {
 
         ]
 
+    });
+
+    $('.our-editions').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+    $('.courses').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+    $('.workshops').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+    $('.news-events').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
     });
 
 
