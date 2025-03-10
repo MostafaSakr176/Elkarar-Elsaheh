@@ -1,6 +1,7 @@
 /* CSS Reset and Base Styles */
 * {
     box-sizing: border-box;
+    direction: ltr;
 }
 
 /* CSS Variables */
@@ -15,6 +16,7 @@
 
 body{
     background-color: #FAFAFA;
+    direction: ltr;
 }
 
 
@@ -183,7 +185,7 @@ body{
 .service-card{
     padding: 1.5rem;
     overflow: hidden;
-    height: 270px;
+    height: 290px;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -226,12 +228,18 @@ body{
 .service-card a {
     opacity: 0;
     transform: translateY(1rem);
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid transparent;
     transition: all 0.3s ease;
 }
 
 .service-card:hover a {
     opacity: 1;
     transform: translateY(0);
+}   
+
+.service-card a:hover {
+    border-bottom: 1px solid #FAFAFA;
 }   
 
 .our-products .slick-slide {
@@ -307,7 +315,7 @@ body{
     }
     .service-card{
         background: #00386C;
-        
+        height: 310px;
     }
 
     .our-sevices .slick-dots {
@@ -325,6 +333,8 @@ body{
     .service-card a {
         opacity: 1;
         transform: translateY(0);
+        padding-bottom: 0.3rem;
+        border-bottom: 1px solid #FAFAFA;
     }
 
     .our-editions{

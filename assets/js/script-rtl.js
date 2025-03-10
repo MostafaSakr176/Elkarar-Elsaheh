@@ -87,6 +87,7 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 5000,
         arrows: true,
+        rtl:true,
         prevArrow: $('.custom-prev'),
         nextArrow: $('.custom-next'),
         adaptiveHeight: false,
@@ -111,6 +112,7 @@ $(document).ready(function () {
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        rtl: true
     });
 
     $('.our-products').slick({
@@ -126,6 +128,7 @@ $(document).ready(function () {
         prevArrow: $('.our-products-custom-prev'),
         nextArrow: $('.our-products-custom-next'),
         adaptiveHeight: false,
+        rtl:true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -156,6 +159,7 @@ $(document).ready(function () {
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        rtl:true,
     });
 
     $('.courses').slick({
@@ -168,6 +172,7 @@ $(document).ready(function () {
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        rtl:true,
     });
 
     $('.workshops').slick({
@@ -180,6 +185,7 @@ $(document).ready(function () {
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        rtl:true,
     });
 
     $('.news-events').slick({
@@ -192,6 +198,7 @@ $(document).ready(function () {
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        rtl:true,
     });
 
 
