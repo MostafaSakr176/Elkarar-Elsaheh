@@ -65,14 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Close dropdown when clicking outside (optional if using CSS hover)
-    /*
-    document.addEventListener('click', (e) => {
-        if (!languageSelector.contains(e.target)) {
-            languageSelector.classList.remove('active');
-        }
-    });
-    */
+
+
+
+
 
 });
 
@@ -128,6 +124,13 @@ $(document).ready(function () {
         adaptiveHeight: false,
         responsive: [
             {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
@@ -171,18 +174,6 @@ $(document).ready(function () {
     });
 
     $('.workshops').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    });
-
-    $('.news-events').slick({
         dots: true,
         infinite: true,
         speed: 500,

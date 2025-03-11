@@ -274,7 +274,11 @@ body{
     display: none;
 }
 
-.news-events{
+#news-events{
+    display: none;
+}
+
+#our-blogs{
     display: none;
 }
 
@@ -363,11 +367,19 @@ body{
         bottom: -10%;
     }
 
-    .news-events{
+    #news-events{
         display: block;
     }
 
-    .news-events .slick-dots {
+    #news-events .slick-dots {
+        bottom: -10%;
+    }
+
+    #our-blogs{
+        display: block;
+    }
+
+    #our-blogs .slick-dots {
         bottom: -10%;
     }
 
