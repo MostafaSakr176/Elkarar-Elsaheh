@@ -1,35 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-
-    const loader = document.querySelector('.loading');
-
-    // Create a promise that resolves when all images are loaded
-    const imagePromises = Array.from(document.images).map(img => {
-        if (img.complete) {
-            return Promise.resolve();
-        } else {
-            return new Promise(resolve => {
-                img.addEventListener('load', resolve);
-                img.addEventListener('error', resolve); // Handle error cases too
-            });
-        }
-    });
-
-    // Wait for all images to load
-    Promise.all(imagePromises)
-        .then(() => {
-            // Add fade-out effect
-            loader.style.opacity = '0';
-            loader.style.transition = 'opacity 0.5s ease-out';
-
-            // Remove loader after fade
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500);
-        });
-
-
-
     // Mobile Menu Functionality
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const mobileMenuClose = document.querySelector('.mobile-menu-close');
@@ -66,36 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
-
-
-
 });
 
 $(document).ready(function () {
 
-    $('.hero-slider').slick({
-        dots: false,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: true,
-        prevArrow: $('.custom-prev'),
-        nextArrow: $('.custom-next'),
-        adaptiveHeight: false,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                    dots: true,
-                }
-            }]
-
+    $('#courses-btn').click(function () {
+        $(this).addClass('active');
+        $('#workshops-btn').removeClass('active');
+        $('#courses').show();
+        $('#workshops').hide();
     });
+
+    $('#workshops-btn').click(function () {
+        $(this).addClass('active');
+        $('#courses-btn').removeClass('active');
+        $('#courses').hide();
+        $('#workshops').show();
+    });
+
 
     $('.our-sevices').slick({
         dots: true,
@@ -150,55 +108,35 @@ $(document).ready(function () {
     });
 
     $('.our-editions').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         cssEase: 'linear',
         autoplay: true,
         autoplaySpeed: 5000,
-        arrows: false,
-        slidesToShow: 1,
+        arrows: true,
+        slidesToShow: 3,
         slidesToScroll: 1,
+        prevArrow: $('.our-editions-custom-prev'),
+        nextArrow: $('.our-editions-custom-next'),
+        adaptiveHeight: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+
+        ]
     });
-
-    $('.courses').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    });
-
-    $('.workshops').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    });
-
-
-    $('#courses-btn').click(function () {
-        $(this).addClass('active');
-        $('#workshops-btn').removeClass('active');
-        $('#courses').show();
-        $('#workshops').hide();
-    });
-
-    $('#workshops-btn').click(function () {
-        $(this).addClass('active');
-        $('#courses-btn').removeClass('active');
-        $('#courses').hide();
-        $('#workshops').show();
-    });
-
 
 });

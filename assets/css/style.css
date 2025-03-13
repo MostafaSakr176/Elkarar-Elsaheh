@@ -243,8 +243,12 @@ body{
     border-bottom: 1px solid #FAFAFA;
 }   
 
-.our-products .slick-slide {
+.slick-slide {
     margin: 0 10px;
+}
+
+.hero-slider .slick-slide {
+    margin: 0 0;
 }
 
 #courses-btn.active{
@@ -258,26 +262,6 @@ body{
 }
 
 .our-sevices{
-    display: none;
-}
-
-.our-editions{
-    display: none;
-}
-
-.courses{
-    display: none;
-}
-
-.workshops{
-    display: none;
-}
-
-#news-events{
-    display: none;
-}
-
-#our-blogs{
     display: none;
 }
 
@@ -299,6 +283,7 @@ body{
 }
 
 @media (max-width: 768px) {
+    
     .hero-slider {
         height: 75vh !important;
     }
@@ -342,46 +327,26 @@ body{
         border-bottom: 1px solid #FAFAFA;
     }
 
-    .our-editions{
-        display: block;
-    }
-
     .our-editions .slick-dots {
         bottom: -10%;
     }
 
-    .courses{
-        display: block;
-    }
 
     .courses .slick-dots {
         bottom: -10%;
-    }
-
-    .workshops{
-        display: block;
     }
 
     .workshops .slick-dots {
         bottom: -10%;
     }
 
-    #news-events{
-        display: block;
-    }
 
-    #news-events .slick-dots {
+    .news-events .slick-dots {
         bottom: -10%;
     }
 
-    #our-blogs{
-        display: block;
-    }
-
-    #our-blogs .slick-dots {
+    .our-blogs .slick-dots {
         bottom: -10%;
     }
-
 
 }
-
