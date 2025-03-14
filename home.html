@@ -22,6 +22,8 @@
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <style>
         /* From Uiverse.io by bociKond */
         .loading {
@@ -252,7 +254,7 @@
     </header>
 
 
-    <main class="md:h-[90vh] h-[75vh] relative bg-black">
+    <main data-aos="fade-up" class="md:h-[90vh] h-[75vh] relative bg-black">
         <div class="hero-slider h-[90vh] relative">
             <div class="relative h-full w-full">
                 <!-- Dark overlay -->
@@ -315,17 +317,17 @@
     <div
         class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-16 md:py-32 grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
         <div class="space-y-6">
-            <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px]">Who We Are?</h2>
-            <p class="text-[#5C5C5C] text-[18px] font-[400] leading-[30px]">The Right Decision is a specialized
+            <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px]" data-aos="fade-right" data-aos-offset="100">Who We Are?</h2>
+            <p class="text-[#5C5C5C] text-[18px] font-[400] leading-[30px]" data-aos="fade-right" data-aos-offset="100" data-aos-delay="100">The Right Decision is a specialized
                 organization providing consultancy and exceptional services in the field of customer experience. We help
                 businesses develop and enhance their relationships with customers through innovative solutions based on
                 the latest market trends.</p>
-            <button
+            <button data-aos="fade-right" data-aos-offset="100" data-aos-delay="200"
                 class="cursor-pointer bg-[#00386C] text-[#fff] text-[18px] font-[400] px-12 py-3 rounded-[8px] hover:bg-[#002241] hover:text-white transition-all duration-300">More
                 details</button>
         </div>
         <div>
-            <video src="assets/images/who are we video.mp4" class="rounded-[12px] w-full h-[250px] md:h-[380px]"
+            <video data-aos="fade-left" data-aos-offset="100" data-aos-delay="100" src="assets/images/who are we video.mp4" class="rounded-[12px] w-full h-[250px] md:h-[380px]"
                 autoplay controls></video>
         </div>
     </div>
@@ -336,12 +338,14 @@
     <div
         style="background: linear-gradient(264.59deg, #00386C 3.9%, rgba(0, 68, 131, 0.954117) 96.21%, rgba(0, 109, 210, 0.8) 490.9%);">
         <div class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-32">
-            <h2 class="text-[#fff] text-[40px] font-[500] leading-[40px] text-center mb-4">Our Services</h2>
-            <p class="text-[#fff] text-[18px] font-[400] leading-[30px] text-center mb-16">We offer a comprehensive
+            <h2 class="text-[#fff] text-[40px] font-[500] leading-[40px] text-center mb-4"
+            data-aos="fade-left" data-aos-offset="200">Our Services</h2>
+            <p class="text-[#fff] text-[18px] font-[400] leading-[30px] text-center mb-16"
+            data-aos="fade-right" data-aos-offset="200">We offer a comprehensive
                 range of services in the field of customer experience, including:</p>
 
             <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card rounded-[20px] text-center">
+                <div class="service-card rounded-[20px] text-center" data-aos="fade-up" data-aos-offset="200">
 
                     <svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_558_2146)">
@@ -381,7 +385,7 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="service-card rounded-[20px] text-center">
+                <div class="service-card rounded-[20px] text-center" data-aos="fade-up" data-aos-offset="200">
 
                     <svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -407,7 +411,7 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="service-card rounded-[20px] text-center">
+                <div class="service-card rounded-[20px] text-center" data-aos="fade-up" data-aos-offset="200">
 
                     <svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -439,7 +443,7 @@
                 </div>
 
                 <!-- Service 4 -->
-                <div class="service-card rounded-[20px] text-center">
+                <div class="service-card rounded-[20px] text-center" data-aos="fade-up" data-aos-offset="200">
 
                     <svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_558_3066)">
@@ -499,7 +503,7 @@
                 </div>
 
                 <!-- Service 5 -->
-                <div class="service-card rounded-[20px] text-center">
+                <div class="service-card rounded-[20px] text-center" data-aos="fade-up" data-aos-offset="200">
 
                     <svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -522,7 +526,7 @@
                 </div>
 
                 <!-- Service 6 -->
-                <div class="service-card rounded-[20px] text-center">
+                <div class="service-card rounded-[20px] text-center" data-aos="fade-up" data-aos-offset="200">
 
                     <svg width="52" height="55" viewBox="0 0 52 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -543,7 +547,7 @@
                 </div>
             </div>
 
-            <div class="our-sevices">
+            <div class="our-sevices" data-aos="fade-up" data-aos-offset="200">
                 <!-- Service 1 -->
                 <div class="service-card rounded-[20px] text-center">
 
@@ -755,11 +759,13 @@
     <div class="bg-white">
         <div
             class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-16 md:py-32">
-            <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4">Our Products</h2>
-            <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-16">We offer a comprehensive
+            <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4"
+            data-aos="fade-left" data-aos-offset="200">Our Products</h2>
+            <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-16"
+            data-aos="fade-right" data-aos-offset="200">We offer a comprehensive
                 range of services in the field of customer experience, including:</p>
 
-            <div class="our-products mb-6">
+            <div class="our-products mb-6" data-aos="fade-up" data-aos-offset="200">
                 <!-- User Satisfaction Analysis Card -->
                 <div class="border border-[#86BDF0] rounded-[12px] p-4">
                     <img src="assets/images/منتجاتنا 1.png" alt="Customer Support Representative"
@@ -857,12 +863,14 @@
 
     <!-- Our Publications -->
     <div class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-12 ">
-        <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4">Our Publications</h2>
-        <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-16">We offer a diverse range
+        <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4"
+        data-aos="fade-left" data-aos-offset="200">Our Publications</h2>
+        <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-16"
+        data-aos="fade-right" data-aos-offset="200">We offer a diverse range
             of products that support the customer experience</p>
 
 
-        <div class="our-editions">
+        <div class="our-editions" data-aos="fade-up" data-aos-offset="200">
 
             <div>
                 <img class="h-[300px] mx-auto mb-8 object-contain transition-all duration-400 hover:scale-[1.03] hover:shadow-2xl hover:shadow-gray-400/50"
@@ -887,7 +895,7 @@
 
         </div>
 
-        <div class="flex justify-center items-center gap-4 w-full">
+        <div class="flex justify-center items-center gap-4 w-full" data-aos="fade-up" data-aos-offset="200">
             <button
                 class="our-editions-custom-prev cursor-pointer w-10 h-10 rounded-[50%] p-2 flex justify-center items-center"
                 style="box-shadow: 0px 3.64px 12.76px 0.91px #00000029;">
@@ -913,13 +921,15 @@
     <div class="bg-white">
         <div
             class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-12 md:py-32">
-            <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4">Training Courses</h2>
-            <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-16">We draw our vision from
+            <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4" 
+            data-aos="fade-left" data-aos-offset="200">Training Courses</h2>
+            <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-16" 
+            data-aos="fade-right" data-aos-offset="200">We draw our vision from
                 leading books in customer experience to provide comprehensive training programs that enhance deep
                 understanding and achieve tangible impact on customer satisfaction.</p>
 
             <!-- Tabs -->
-            <div class="flex justify-center mb-12 trainings-courses-tabs">
+            <div class="flex justify-center mb-12 trainings-courses-tabs" data-aos="fade-up" data-aos-offset="200">
                 <div class="inline-flex gap-4 rounded-lg border border-[#00386C] overflow-hidden p-1">
                     <button
                         class="cursor-pointer px-8 py-3 rounded-lg text-[14px] md:text-[18px] font-[500] text-[#00386C] transition-all duration-300 active"
@@ -931,7 +941,7 @@
             </div>
 
             <!-- Training Cards Grid -->
-            <div id="courses">
+            <div id="courses" data-aos="fade-up" data-aos-offset="200">
 
                 <div class="courses mb-6">
                     <!-- Card 1 -->
@@ -1241,7 +1251,7 @@
 
 
             <!-- Training Cards Grid -->
-            <div class="hidden" id="workshops">
+            <div class="hidden" id="workshops" data-aos="fade-up" data-aos-offset="200">
                 <div class="workshops mb-6">
                     <!-- Card 1 -->
                     <div
@@ -1646,26 +1656,28 @@
 
     <!-- Our Clients -->
     <div class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-12">
-        <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4">Our Clients</h2>
-        <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-12">A distinguished group of
+        <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4"
+        data-aos="fade-left" data-aos-offset="200">Our Clients</h2>
+        <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-12"
+        data-aos="fade-right" data-aos-offset="200">A distinguished group of
             clients from the government and private sectors and individuals.</p>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
 
-            <img src="assets/images/client 1.png" alt="">
-            <img src="assets/images/client 2.png" alt="">
-            <img src="assets/images/client 3.png" alt="">
-            <img src="assets/images/client 4.png" alt="">
-            <img src="assets/images/client 5.png" alt="">
-            <img src="assets/images/client 6.png" alt="">
-            <img src="assets/images/client 7.png" alt="">
-            <img src="assets/images/client 8.png" alt="">
-            <img src="assets/images/client 9.png" alt="">
-            <img src="assets/images/client 10.png" alt="">
+            <img src="assets/images/client 1.png" alt="" data-aos="fade-up" data-aos-offset="200">
+            <img src="assets/images/client 2.png" alt="" data-aos="fade-up" data-aos-offset="200">
+            <img src="assets/images/client 3.png" alt="" data-aos="fade-up" data-aos-offset="200">
+            <img src="assets/images/client 4.png" alt="" data-aos="fade-up" data-aos-offset="200">
+            <img src="assets/images/client 5.png" alt="" data-aos="fade-up" data-aos-offset="200">
+            <img src="assets/images/client 6.png" alt="" data-aos="fade-up" data-aos-offset="200">
+            <img src="assets/images/client 7.png" alt="" data-aos="fade-up" data-aos-offset="200">
+            <img src="assets/images/client 8.png" alt="" data-aos="fade-up" data-aos-offset="200">
+            <img src="assets/images/client 9.png" alt="" data-aos="fade-up" data-aos-offset="200">
+            <img src="assets/images/client 10.png" alt="" data-aos="fade-up" data-aos-offset="200">
 
         </div>
 
-        <div class="w-full flex justify-center items-center mt-12">
+        <div class="w-full flex justify-center items-center mt-12" data-aos="fade-up" data-aos-offset="200">
             <button
                 class="cursor-pointer bg-[#00386C] text-[#fff] text-[18px] font-[400] px-12 py-3 rounded-[8px] hover:bg-[#002241] hover:text-white transition-all duration-300">Start
                 Your
@@ -1679,13 +1691,15 @@
     <div class="bg-white">
         <div
             class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-12 md:py-24">
-            <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4">News and Events</h2>
-            <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-12">Follow our events and news
+            <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4"
+            data-aos="fade-left" data-aos-offset="200">News and Events</h2>
+            <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-12"
+            data-aos="fade-right" data-aos-offset="200">Follow our events and news
                 to
                 learn about the latest developments in improving customer experience and service innovation.</p>
 
 
-            <div class="news-events mb-6">
+            <div class="news-events mb-6" data-aos="fade-up" data-aos-offset="200">
                 <div
                     class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                     <div class="relative rounded-xl overflow-hidden">
@@ -1871,7 +1885,7 @@
                 </div>
             </div>
 
-            <div class="flex justify-center items-center gap-4 w-full">
+            <div class="flex justify-center items-center gap-4 w-full" data-aos="fade-up" data-aos-offset="200">
                 <button
                     class="news-events-custom-prev cursor-pointer w-10 h-10 rounded-[50%] p-2 flex justify-center items-center"
                     style="box-shadow: 0px 3.64px 12.76px 0.91px #00000029;">
@@ -1895,11 +1909,13 @@
     <!-- Blogs Section -->
 
     <div class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-12 md:py-24">
-        <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4">Our Blogs</h2>
-        <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-12">Follow our events and news to
+        <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4"
+        data-aos="fade-left" data-aos-offset="200">Our Blogs</h2>
+        <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-12"
+        data-aos="fade-right" data-aos-offset="200">Follow our events and news to
             learn about the latest developments in improving customer experience and service innovation.</p>
 
-        <div class="our-blogs mb-6">
+        <div class="our-blogs mb-6" data-aos="fade-up" data-aos-offset="200">
 
             <div
                 class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
@@ -2034,7 +2050,7 @@
             </div>
         </div>
 
-        <div class="flex justify-center items-center gap-4 w-full">
+        <div class="flex justify-center items-center gap-4 w-full" data-aos="fade-up" data-aos-offset="200">
             <button
                 class="our-blogs-custom-prev cursor-pointer w-10 h-10 rounded-[50%] p-2 flex justify-center items-center"
                 style="box-shadow: 0px 3.64px 12.76px 0.91px #00000029;">
@@ -2057,7 +2073,7 @@
 
     <!-- Footer -->
 
-    <footer class="border-t border-[#12121233] bg-white">
+    <footer class="border-t border-[#12121233] bg-white" data-aos="fade-up" data-aos-offset="200">
 
         <div
             class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -2116,7 +2132,7 @@
                                 stroke="#3C73A7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
-                    <span class="text-[#737373] text-[14px] font-[400]">0096653535353</span>
+                    <span class="text-[#737373] text-[14px] font-[400]">0000000000000</span>
                 </a>
                 <a href="" class="flex items-center gap-4">
                     <span
@@ -2134,7 +2150,7 @@
                                 stroke-linejoin="round" />
                         </svg>
                     </span>
-                    <span class="text-[#737373] text-[14px] font-[400]">Info@cx.com.sa</span>
+                    <span class="text-[#737373] text-[14px] font-[400]">rightdecisionsa.com</span>
                 </a>
                 <a href="" class="flex items-center gap-4">
                     <span
@@ -2176,6 +2192,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"
         integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="assets/js/script.js" defer></script>
 
     <script>
