@@ -121,12 +121,8 @@
     <header class="bg-white">
         <nav
             class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl flex justify-between items-center py-4 relative">
-            <a href="#" class="w-full lg:w-auto hidden lg:block">
-                <img src="assets/images/logo.png" alt="logo" class="w-[160px]">
-            </a>
-
-            <a href="#" class="w-full lg:w-auto block lg:hidden">
-                <img src="assets/images/logo-mobile.png" alt="logo" class="w-[80px]">
+            <a href="#" class="w-full lg:w-auto ">
+                <img src="assets/images/logo.png" alt="logo" class="w-[140px] md:w-[160px]">
             </a>
 
             <!-- Navigation Links - Desktop -->
@@ -192,7 +188,7 @@
                     <div
                         class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-4 flex justify-between items-center mb-8">
                         <a href="#" class="w-full lg:w-auto block lg:hidden">
-                            <img src="assets/images/logo-mobile.png" alt="logo" class="w-[80px]">
+                            <img src="assets/images/logo.png" alt="logo" class="w-[140px]">
                         </a>
                         <div class="flex items-center gap-4">
 
@@ -2162,11 +2158,11 @@
                         <div class="relative h-full w-full">
                 <!-- Dark overlay -->
                 <div class="absolute inset-0 bg-black/70 z-[1]"></div>
-                <img src="${banner.image}" alt="" srcset=""
+                <img src="${banner.image}" alt="${banner.title}" srcset=""
                     class="w-full h-full object-cover">
                 <div
-                    class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-full text-center flex flex-col gap-4 items-center justify-center z-[2] w-[90%] mx-auto md:max-w-1xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl">
-                    <h1 class="md:text-[48px] text-[24px] text-[#fff] font-[400] md:leading-[76.8px] leading-[40px]">${banner.title}</h1>
+                    class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-full text-center flex flex-col gap-8 items-center justify-center z-[2] w-[90%] mx-auto md:max-w-1xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl">
+                    <h1 class="md:text-[48px] text-[24px] text-[#fff] font-[600] md:leading-[56px] leading-[32px]">${banner.title}</h1>
                     <p class="md:text-[18px] text-[14px] text-[#fff] font-[400] md:leading-[28px] leading-[20px]">${banner.content}</p>
                     <a href="" 
                         class="bg-[#00386C] cursor-pointer text-white md:text-[24px] text-[18px] font-[400] md:leading-[36px] leading-[24px] border border-[#86BDF0] px-6 py-3 rounded-[12px] hover:bg-[#002241] hover:text-white transition-all duration-300">اكتشف خدماتنا</a>
