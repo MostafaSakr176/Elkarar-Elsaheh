@@ -256,11 +256,6 @@ body{
     color: white;
 }
 
-#workshops-btn.active{
-    background: #00386C;
-    color: white;   
-}
-
 .our-sevices{
     display: none;
 }
@@ -331,15 +326,9 @@ body{
         bottom: -10%;
     }
 
-
     .courses .slick-dots {
         bottom: -10%;
     }
-
-    .workshops .slick-dots {
-        bottom: -10%;
-    }
-
 
     .news-events .slick-dots {
         bottom: -10%;

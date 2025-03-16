@@ -40,20 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 $(document).ready(function () {
 
-    $('#courses-btn').click(function () {
-        $(this).addClass('active');
-        $('#workshops-btn').removeClass('active');
-        $('#courses').show();
-        $('#workshops').hide();
-    });
-
-    $('#workshops-btn').click(function () {
-        $(this).addClass('active');
-        $('#courses-btn').removeClass('active');
-        $('#courses').hide();
-        $('#workshops').show();
-    });
-
 
     $('.our-sevices').slick({
         dots: true,
@@ -137,6 +123,30 @@ $(document).ready(function () {
             }
 
         ]
+    });
+
+    $('.our-goals').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+    $('.our-core-values').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
     });
 
 });

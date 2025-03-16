@@ -40,20 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 $(document).ready(function () {
 
-    $('#courses-btn').click(function () {
-        $(this).addClass('active');
-        $('#workshops-btn').removeClass('active');
-        $('#courses').show();
-        $('#workshops').hide();
-    });
-
-    $('#workshops-btn').click(function () {
-        $(this).addClass('active');
-        $('#courses-btn').removeClass('active');
-        $('#courses').hide();
-        $('#workshops').show();
-    });
-
 
     $('.our-sevices').slick({
         dots: true,
