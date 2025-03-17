@@ -273,9 +273,193 @@ body{
     transition: all 0.3s ease;
 }
 
-.social-icon:hover svg path{
-    fill: #fff;
+.social-icon:hover svg path {
+    /* fill: #fff; */
+    stroke: #fff;
 }
+
+
+
+/* who are we */
+
+.our-message-container {
+    background: linear-gradient(90deg, #61C2EE 0%, rgba(97, 194, 238, 0) 79.12%);
+    padding: 2px;
+    border-radius: 150px;
+    overflow: hidden;
+}
+
+.our-message-content {
+    background-color: #FAFAFA;
+    border-radius: 150px;
+    padding: 2rem 3rem;
+    height: 100%;
+    width: 100%;
+}
+
+.our-vision-container {
+    background: linear-gradient(270deg, #61C2EE 0%, rgba(97, 194, 238, 0) 79.12%);
+    padding: 2px;
+    border-radius: 150px;
+    overflow: hidden;
+}
+
+.our-vision-content {
+    background-color: #FAFAFA;
+    border-radius: 150px;
+    padding: 2rem 3rem;
+    height: 100%;
+    width: 100%;
+}
+
+.our-goals {
+    display: none;
+}
+
+.goal-card {
+    padding: 1.5rem;
+    overflow: hidden;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 2rem;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+
+.goal-card:hover {
+    background-color: #00386C;
+}
+
+.goal-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.our-core-values{
+    display: none;
+}
+
+.our-core-values-card{
+    border: 1px solid #BBDAF7;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0px 21.6px 45px 0px #0000000D;
+}
+
+.our-core-values-card span{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DFF3FC66;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+}
+
+.our-core-values-card h3{
+    color: #00386C;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 160%;
+    margin-bottom: 0.7rem;
+}
+
+.our-core-values-card p{
+    color: #5C5C5C;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+}
+
+
+.counters{
+    background-image: url(../images/counters\ bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3rem 0;
+    height: 200px;
+}
+
+.counter-item{
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0px 21.6px 45px 0px #0000000D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-item h6{
+    font-size: 48px;
+    font-weight: 700;
+    color: #00386C;
+    text-align: center;
+}
+
+.counter-item p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #5C5C5C;
+    text-align: center;
+}
+
+
+.team-work-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-work-item img{
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    box-shadow: 0px 21.6px 45px 0px #0000000D;
+    margin-bottom: 1.3rem;
+    transition: all 0.3s ease !important;
+}
+
+.team-work-item:hover img{
+    border: 1px solid #3C7F9D;
+}
+
+.team-work-item h3{
+    font-size: 24px;
+    font-weight: 600;
+    color: #5991C4;
+    margin-bottom: 0.7rem;
+}
+
+.team-work-item p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #00162B;
+    text-align: center;
+}
+
+
+/* contact us */
+
+.left-side {
+    padding: 0.5px 0.5px 1px 1px;
+    border-radius: 12px;
+    background: linear-gradient(270deg, #2194F3 0%, #1157C8 100%);
+    overflow: hidden;
+
+}
+
+
 
 @media (max-width: 768px) {
     
@@ -336,6 +520,23 @@ body{
 
     .our-blogs .slick-dots {
         bottom: -10%;
+    }
+
+    
+    .our-goals .slick-dots{
+        bottom: -10%;
+    }
+
+    .our-core-values .slick-dots{
+        bottom: -10%;
+    }
+
+    .counter-item h6{
+        font-size: 32px;
+    }
+    
+    .counter-item p{
+        font-size: 16px;
     }
 
 }

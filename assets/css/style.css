@@ -281,7 +281,8 @@ body {
 }
 
 .social-icon:hover svg path {
-    fill: #fff;
+    /* fill: #fff; */
+    stroke: #fff;
 }
 
 /* who are we */
@@ -341,11 +342,11 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.our-core-values{
+.our-core-values {
     display: none;
 }
 
-.our-core-values-card{
+.our-core-values-card {
     border: 1px solid #BBDAF7;
     border-radius: 12px;
     padding: 2rem;
@@ -356,7 +357,7 @@ body {
     box-shadow: 0px 21.6px 45px 0px #0000000D;
 }
 
-.our-core-values-card span{
+.our-core-values-card span {
     width: 60px;
     height: 60px;
     display: flex;
@@ -367,7 +368,7 @@ body {
     border-radius: 50%;
 }
 
-.our-core-values-card h3{
+.our-core-values-card h3 {
     color: #00386C;
     font-weight: 700;
     font-size: 20px;
@@ -375,7 +376,7 @@ body {
     margin-bottom: 0.7rem;
 }
 
-.our-core-values-card p{
+.our-core-values-card p {
     color: #5C5C5C;
     font-weight: 400;
     font-size: 16px;
@@ -383,7 +384,7 @@ body {
 }
 
 
-.counters{
+.counters {
     background-image: url(../images/counters\ bg.png);
     background-size: cover;
     background-position: center;
@@ -392,7 +393,7 @@ body {
     height: 200px;
 }
 
-.counter-item{
+.counter-item {
     padding: 1rem;
     border-radius: 12px;
     background-color: #fff;
@@ -403,14 +404,14 @@ body {
     align-items: center;
 }
 
-.counter-item h6{
+.counter-item h6 {
     font-size: 48px;
     font-weight: 700;
     color: #00386C;
     text-align: center;
 }
 
-.counter-item p{
+.counter-item p {
     font-size: 20px;
     font-weight: 400;
     color: #5C5C5C;
@@ -418,14 +419,14 @@ body {
 }
 
 
-.team-work-item{
+.team-work-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.team-work-item img{
+.team-work-item img {
     width: 100%;
     border-radius: 50%;
     border: 1px solid transparent;
@@ -434,23 +435,38 @@ body {
     transition: all 0.3s ease !important;
 }
 
-.team-work-item:hover img{
+.team-work-item:hover img {
     border: 1px solid #3C7F9D;
 }
 
-.team-work-item h3{
+.team-work-item h3 {
     font-size: 24px;
     font-weight: 600;
     color: #5991C4;
     margin-bottom: 0.7rem;
 }
 
-.team-work-item p{
+.team-work-item p {
     font-size: 18px;
     font-weight: 400;
     color: #00162B;
     text-align: center;
 }
+
+
+
+/* contact us */
+
+.left-side {
+    padding: 0.5px 0.5px 1px 1px;
+    border-radius: 12px;
+    background: linear-gradient(270deg, #2194F3 0%, #1157C8 100%);
+    overflow: hidden;
+
+}
+
+
+
 
 
 
@@ -484,7 +500,7 @@ body {
         display: block;
     }
 
-    .our-core-values{
+    .our-core-values {
         display: block;
     }
 
@@ -530,19 +546,19 @@ body {
         bottom: -10%;
     }
 
-    .our-goals .slick-dots{
+    .our-goals .slick-dots {
         bottom: -10%;
     }
 
-    .our-core-values .slick-dots{
+    .our-core-values .slick-dots {
         bottom: -10%;
     }
 
-    .counter-item h6{
+    .counter-item h6 {
         font-size: 32px;
     }
-    
-    .counter-item p{
+
+    .counter-item p {
         font-size: 16px;
     }
 
