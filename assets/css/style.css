@@ -466,7 +466,27 @@ body {
 }
 
 
-/* Employment */
+/* templates */
+
+
+.template1-card{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+#part1-btn.active, #part2-btn.active, #part3-btn.active{
+    background: #00386C;
+    color: white;
+}
+
+
+
+
 
 
 
