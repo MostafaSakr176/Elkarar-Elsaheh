@@ -40,6 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 $(document).ready(function () {
 
+    $(".collapse-header").click(function () {
+        let parent = $(this).closest(".collapse-item");
+
+        // Toggle active class
+        parent.toggleClass("active");
+
+        // Slide content down/up
+        parent.find(".collapse-content").slideToggle(300);
+    });
+
 
     $('#part1-btn').click(function () {
         $(this).addClass('active');
@@ -194,7 +204,7 @@ $(document).ready(function () {
         adaptiveHeight: false,
         responsive: [
             {
-                breakpoint: 776,
+                breakpoint: 1114,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -202,6 +212,20 @@ $(document).ready(function () {
             }
 
         ]
+    });
+
+    $('.tistmonials').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.tistmonials-custom-prev'),
+        nextArrow: $('.tistmonials-custom-next'),
     });
 
 });
