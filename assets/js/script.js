@@ -41,6 +41,34 @@ document.addEventListener('DOMContentLoaded', () => {
 $(document).ready(function () {
 
 
+    $('#part1-btn').click(function () {
+        $(this).addClass('active');
+        $('#part2-btn').removeClass('active');
+        $('#part3-btn').removeClass('active');
+        $('#part1').show();
+        $('#part2').hide();
+        $('#part3').hide();
+    });
+
+    $('#part2-btn').click(function () {
+        $(this).addClass('active');
+        $('#part1-btn').removeClass('active');
+        $('#part3-btn').removeClass('active');
+        $('#part1').hide();
+        $('#part3').hide();
+        $('#part2').show();
+    });
+
+    $('#part3-btn').click(function () {
+        $(this).addClass('active');
+        $('#part1-btn').removeClass('active');
+        $('#part2-btn').removeClass('active');
+        $('#part1').hide();
+        $('#part2').hide();
+        $('#part3').show();
+    });
+
+
     $('.our-sevices').slick({
         dots: true,
         infinite: true,
@@ -147,6 +175,33 @@ $(document).ready(function () {
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+    });
+
+
+
+    $('.template1').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        prevArrow: $('.template1-custom-prev'),
+        nextArrow: $('.template1-custom-next'),
+        adaptiveHeight: false,
+        responsive: [
+            {
+                breakpoint: 776,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+
+        ]
     });
 
 });
