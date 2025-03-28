@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elkarar Elsaheh - Decision Making Platform">
+    <title>Right Decision</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Mansalva&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        /* From Uiverse.io by bociKond */
+        .loading {
+            position: fixed;
+            z-index: 999999;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .spinner {
+            width: 70.4px;
+            height: 70.4px;
+            --clr: #00386C;
+            --clr-alpha: #00386c30;
+            animation: spinner 1.6s infinite ease;
+            transform-style: preserve-3d;
+        }
+
+        .spinner>div {
+            background-color: var(--clr-alpha);
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            border: 3.5px solid var(--clr);
+        }
+
+        .spinner div:nth-of-type(1) {
+            transform: translateZ(-35.2px) rotateY(180deg);
+        }
+
+        .spinner div:nth-of-type(2) {
+            transform: rotateY(-270deg) translateX(50%);
+            transform-origin: top right;
+        }
+
+        .spinner div:nth-of-type(3) {
+            transform: rotateY(270deg) translateX(-50%);
+            transform-origin: center left;
+        }
+
+        .spinner div:nth-of-type(4) {
+            transform: rotateX(90deg) translateY(-50%);
+            transform-origin: top center;
+        }
+
+        .spinner div:nth-of-type(5) {
+            transform: rotateX(-90deg) translateY(50%);
+            transform-origin: bottom center;
+        }
+
+        .spinner div:nth-of-type(6) {
+            transform: translateZ(35.2px);
+        }
+
+        @keyframes spinner {
+            0% {
+                transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+            }
+
+            50% {
+                transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+            }
+
+            100% {
+                transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+            }
+        }
+    </style>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/style-rtl.css">
+
+</head>
+
+<body dir="rtl">
+
+    <div class="loading">
+        <!-- From Uiverse.io by bociKond -->
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header class="bg-white">
+        <nav
+            class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl flex justify-between items-center py-4 gap-4 relative">
+            <a href="home.html" class="w-full lg:w-auto">
+                <img src="../assets/images/logo.png" alt="logo" class="w-[140px]">
+            </a>
+
+            <!-- Navigation Links - Desktop -->
+            <ul class="hidden lg:flex gap-4 pt-3">
+                <li class="flex justify-center items-center">
+                    <a href="home.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">الرئيسية</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="who-we-are.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link">من
+                        نحن</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="our-services.html"
+                        class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">خدماتنا</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="our-products.html"
+                        class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">منتجاتنا</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="publications.html"
+                        class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">إصداراتنا</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="training.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">برامج
+                        التدريب </a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="news.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">الاخبار</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="blogs.html"
+                        class="text-[15px] text-[#00386C] font-[400] pb-3 px-1 nav-link active">المدونة</a>
+                </li>
+            </ul>
+
+            <div class="nav-container flex items-center justify-center gap-4">
+                <div class="language-selector">
+                    <button class="cursor-pointer lang-btn flex items-center gap-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.00001 3H9.00001C7.05001 8.84 7.05001 15.16 9.00001 21H8.00001" stroke="#121212"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 3C16.95 8.84 16.95 15.16 15 21" stroke="#121212" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16" stroke="#121212" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 9C8.84 7.05 15.16 7.05 21 9" stroke="#121212" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="current-lang text-[16px] text-[#121212]">عربي</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown text-center">
+                        <a href="blogs.html" class="cursor-pointer lang-option" data-lang="ar">عربي</a>
+                        <a href="../blogs.html" class="cursor-pointer lang-option" data-lang="en">ENG</a>
+                    </div>
+                </div>
+                <a href="contact-us.html"
+                    class="bg-transparent hidden lg:block cursor-pointer text-[16px] font-[400] border border-[#00386C] text-[#00386C] px-4 py-2 w-[120px] text-center rounded-md hover:bg-[#00386C] hover:text-white transition-all duration-300">تواصل
+                    بنا</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="cursor-pointer lg:hidden text-[#00386C] mobile-menu-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 7H21" stroke="#00386C" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M3 12H21" stroke="#00386C" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M3 17H21" stroke="#00386C" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <!-- Backdrop -->
+            <div
+                class="backdrop fixed inset-0 bg-black/70 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-[9998]">
+            </div>
+
+            <!-- Mobile Menu - Hidden by default -->
+            <div
+                class="mobile-menu fixed inset-0 bg-white transform -translate-y-[200%] transition-transform duration-300 ease-in-out lg:hidden z-[9999]">
+                <div class="bg-white ">
+                    <div
+                        class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-4 flex justify-between items-center mb-8">
+                        <a href="home.html" class="w-full lg:w-auto block lg:hidden">
+                            <img src="../assets/images/logo.png" alt="logo" class="w-[140px]">
+                        </a>
+                        <div class="flex items-center gap-4">
+
+                            <div class="language-selector">
+                                <button class="cursor-pointer lang-btn flex items-center gap-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                            stroke="#121212" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M8.00001 3H9.00001C7.05001 8.84 7.05001 15.16 9.00001 21H8.00001"
+                                            stroke="#121212" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M15 3C16.95 8.84 16.95 15.16 15 21" stroke="#121212" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16" stroke="#121212"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M3 9C8.84 7.05 15.16 7.05 21 9" stroke="#121212" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="current-lang text-[16px] text-[#121212]">عربي</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="lang-dropdown text-center">
+                                    <a href="blogs.html" class="cursor-pointer lang-option" data-lang="ar">عربي</a>
+                                    <a href="../blogs.html" class="cursor-pointer lang-option" data-lang="en">ENG</a>
+                                </div>
+                            </div>
+                            <button class="cursor-pointer mobile-menu-close text-[#00386C]">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18" stroke="#00386C" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M6 6L18 18" stroke="#00386C" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <ul class="flex flex-col justify-center items-center gap-6">
+                        <li class="pb-4">
+                            <a href="home.html"
+                                class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link ">الرئيسية</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="who-we-are.html"
+                                class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link">من نحن</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="our-services.html"
+                                class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">خدماتنا</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="our-products.html"
+                                class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">منتجاتنا</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="publications.html"
+                                class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">إصداراتنا</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="training.html"
+                                class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">برامج تدريب</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="news.html"
+                                class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">الاخبار</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="blogs.html"
+                                class="text-[16px] text-[#00386C] font-[400] pb-3 px-2 nav-link active">المدونة</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="contact-us.html"
+                                class="bg-transparent w-max cursor-pointer text-[18px] font-[400] border border-[#00386C] text-[#00386C] px-5 py-2 rounded-md hover:bg-[#00386C] hover:text-white transition-all duration-300">تواصل
+                                معنا</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main data-aos="fade-down" class="h-[40vh]">
+        <div class="h-[40vh] relative">
+            <div class="h-full w-full">
+                <!-- Dark overlay -->
+                <img src="../assets/images/contact-us banner.png" alt="" srcset="" class="w-full h-full object-cover">
+                <div
+                    class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-full text-center flex flex-col gap-4 items-center justify-center z-[2] w-[90%] mx-auto md:max-w-1xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl">
+                    <h1 class="md:text-[48px] text-[24px] text-[#FAFAFA] font-[600] md:leading-[76.8px] leading-[40px]">
+                        مدوناتنا</h1>
+                    <p class="md:text-[18px] text-[14px] text-[#FAFAFA] font-[400] md:leading-[28px] leading-[20px]">
+                        تابع فعالياتنا وأخبارنا للتعرف
+            على أحدث التطورات في تحسين تجربة العملاء وابتكار الخدمات</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- blogs -->
+    <div class="bg-white">
+        <div
+            class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-12 md:py-32">
+            <!-- blogs Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-offset="100">
+
+                <div
+                    class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="../assets/images/trainings 1.png" alt="تخطيط عمليات الشراء"
+                            class="w-full h-48 object-cover">
+                        <div
+                            class="absolute bottom-0 left-0 bg-[#00000066] overflow-hidden w-full flex flex-col items-center justify-center p-1">
+                            <span class="text-[#FAFAFA] text-[14px] font-[400] flex items-center gap-2">٢٠ فبراير ٢٠٢٥
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3.5 9.5376L20.5 9.5376" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M21 8.94775V17.4478C21 20.4478 19.5 22.4478 16 22.4478H8C4.5 22.4478 3 20.4478 3 17.4478L3 8.94775C3 5.94775 4.5 3.94775 8 3.94775L16 3.94775C19.5 3.94775 21 5.94775 21 8.94775Z"
+                                        stroke="#FAFAFA" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 14.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 17.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 14.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 17.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 14.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 17.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pt-4 space-y-2">
+                        <h3 class="text-[#00386C] text-[18px] font-[600] leading-[30px]">منتدى تجربة العملاء العالمي
+                        </h3>
+                        <p class="text-[#737373] text-[14px] font-[400] leading-[20px]">تابع فعالياتنا وأخبارنا للتعرف
+                            على
+                            أحدث التطورات في تحسين تجربة العملاء وابتكار الخدمات</p>
+                    </div>
+                </div>
+
+                <div
+                    class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="../assets/images/trainings 1.png" alt="تخطيط عمليات الشراء"
+                            class="w-full h-48 object-cover">
+                        <div
+                            class="absolute bottom-0 left-0 bg-[#00000066] overflow-hidden w-full flex flex-col items-center justify-center p-1">
+                            <span class="text-[#FAFAFA] text-[14px] font-[400] flex items-center gap-2">٢٠ فبراير ٢٠٢٥
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3.5 9.5376L20.5 9.5376" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M21 8.94775V17.4478C21 20.4478 19.5 22.4478 16 22.4478H8C4.5 22.4478 3 20.4478 3 17.4478L3 8.94775C3 5.94775 4.5 3.94775 8 3.94775L16 3.94775C19.5 3.94775 21 5.94775 21 8.94775Z"
+                                        stroke="#FAFAFA" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 14.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 17.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 14.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 17.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 14.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 17.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pt-4 space-y-2">
+                        <h3 class="text-[#00386C] text-[18px] font-[600] leading-[30px]">منتدى تجربة العملاء العالمي
+                        </h3>
+                        <p class="text-[#737373] text-[14px] font-[400] leading-[20px]">تابع فعالياتنا وأخبارنا للتعرف
+                            على
+                            أحدث التطورات في تحسين تجربة العملاء وابتكار الخدمات</p>
+                    </div>
+                </div>
+
+                <div
+                    class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="../assets/images/trainings 1.png" alt="تخطيط عمليات الشراء"
+                            class="w-full h-48 object-cover">
+                        <div
+                            class="absolute bottom-0 left-0 bg-[#00000066] overflow-hidden w-full flex flex-col items-center justify-center p-1">
+                            <span class="text-[#FAFAFA] text-[14px] font-[400] flex items-center gap-2">٢٠ فبراير ٢٠٢٥
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3.5 9.5376L20.5 9.5376" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M21 8.94775V17.4478C21 20.4478 19.5 22.4478 16 22.4478H8C4.5 22.4478 3 20.4478 3 17.4478L3 8.94775C3 5.94775 4.5 3.94775 8 3.94775L16 3.94775C19.5 3.94775 21 5.94775 21 8.94775Z"
+                                        stroke="#FAFAFA" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 14.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 17.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 14.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 17.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 14.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 17.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pt-4 space-y-2">
+                        <h3 class="text-[#00386C] text-[18px] font-[600] leading-[30px]">منتدى تجربة العملاء العالمي
+                        </h3>
+                        <p class="text-[#737373] text-[14px] font-[400] leading-[20px]">تابع فعالياتنا وأخبارنا للتعرف
+                            على
+                            أحدث التطورات في تحسين تجربة العملاء وابتكار الخدمات</p>
+                    </div>
+                </div>
+
+                <div
+                    class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="../assets/images/trainings 1.png" alt="تخطيط عمليات الشراء"
+                            class="w-full h-48 object-cover">
+                        <div
+                            class="absolute bottom-0 left-0 bg-[#00000066] overflow-hidden w-full flex flex-col items-center justify-center p-1">
+                            <span class="text-[#FAFAFA] text-[14px] font-[400] flex items-center gap-2">٢٠ فبراير ٢٠٢٥
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3.5 9.5376L20.5 9.5376" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M21 8.94775V17.4478C21 20.4478 19.5 22.4478 16 22.4478H8C4.5 22.4478 3 20.4478 3 17.4478L3 8.94775C3 5.94775 4.5 3.94775 8 3.94775L16 3.94775C19.5 3.94775 21 5.94775 21 8.94775Z"
+                                        stroke="#FAFAFA" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 14.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 17.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 14.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 17.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 14.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 17.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pt-4 space-y-2">
+                        <h3 class="text-[#00386C] text-[18px] font-[600] leading-[30px]">منتدى تجربة العملاء العالمي
+                        </h3>
+                        <p class="text-[#737373] text-[14px] font-[400] leading-[20px]">تابع فعالياتنا وأخبارنا للتعرف
+                            على
+                            أحدث التطورات في تحسين تجربة العملاء وابتكار الخدمات</p>
+                    </div>
+                </div>
+
+                <div
+                    class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="../assets/images/trainings 1.png" alt="تخطيط عمليات الشراء"
+                            class="w-full h-48 object-cover">
+                        <div
+                            class="absolute bottom-0 left-0 bg-[#00000066] overflow-hidden w-full flex flex-col items-center justify-center p-1">
+                            <span class="text-[#FAFAFA] text-[14px] font-[400] flex items-center gap-2">٢٠ فبراير ٢٠٢٥
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3.5 9.5376L20.5 9.5376" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M21 8.94775V17.4478C21 20.4478 19.5 22.4478 16 22.4478H8C4.5 22.4478 3 20.4478 3 17.4478L3 8.94775C3 5.94775 4.5 3.94775 8 3.94775L16 3.94775C19.5 3.94775 21 5.94775 21 8.94775Z"
+                                        stroke="#FAFAFA" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 14.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 17.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 14.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 17.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 14.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 17.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pt-4 space-y-2">
+                        <h3 class="text-[#00386C] text-[18px] font-[600] leading-[30px]">منتدى تجربة العملاء العالمي
+                        </h3>
+                        <p class="text-[#737373] text-[14px] font-[400] leading-[20px]">تابع فعالياتنا وأخبارنا للتعرف
+                            على
+                            أحدث التطورات في تحسين تجربة العملاء وابتكار الخدمات</p>
+                    </div>
+                </div>
+
+                <div
+                    class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="../assets/images/trainings 1.png" alt="تخطيط عمليات الشراء"
+                            class="w-full h-48 object-cover">
+                        <div
+                            class="absolute bottom-0 left-0 bg-[#00000066] overflow-hidden w-full flex flex-col items-center justify-center p-1">
+                            <span class="text-[#FAFAFA] text-[14px] font-[400] flex items-center gap-2">٢٠ فبراير ٢٠٢٥
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16 2.44775V5.44775" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3.5 9.5376L20.5 9.5376" stroke="#FAFAFA" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M21 8.94775V17.4478C21 20.4478 19.5 22.4478 16 22.4478H8C4.5 22.4478 3 20.4478 3 17.4478L3 8.94775C3 5.94775 4.5 3.94775 8 3.94775L16 3.94775C19.5 3.94775 21 5.94775 21 8.94775Z"
+                                        stroke="#FAFAFA" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 14.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.6947 17.1479H15.7037" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 14.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.9955 17.1479H12.0045" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 14.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.29431 17.1479H8.30329" stroke="#FAFAFA" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pt-4 space-y-2">
+                        <h3 class="text-[#00386C] text-[18px] font-[600] leading-[30px]">منتدى تجربة العملاء العالمي
+                        </h3>
+                        <p class="text-[#737373] text-[14px] font-[400] leading-[20px]">تابع فعالياتنا وأخبارنا للتعرف
+                            على
+                            أحدث التطورات في تحسين تجربة العملاء وابتكار الخدمات</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-[#12121233] bg-white" data-aos="fade-up" data-aos-offset="100">
+
+        <div
+            class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="space-y-4 ">
+                <img src="../assets/images/logo.png" alt="" class="w-[160px]">
+                <p class="text-[#737373] text-[14px] font-[400] leading-[22px]">A Saudi establishment specialized in
+                    customer experience that focuses on development and achieving results, providing high expertise
+                    specifically designed throughout the project lifecycle.</p>
+
+                <div class="flex items-center gap-4">
+                    <a href=""
+                        class="social-icon w-12 h-12 rounded-[50%] border-[1.5px] border-[#3C73A7] flex items-center justify-center ">
+                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.3263 0.421387H20.6998L13.3297 8.84488L22 20.3074H15.2112L9.89404 13.3554L3.80995 20.3074H0.434432L8.31743 11.2975L0 0.421387H6.96111L11.7674 6.77572L17.3263 0.421387ZM16.1423 18.2882H18.0116L5.94539 2.33452H3.93946L16.1423 18.2882Z"
+                                fill="#3C73A7" />
+                        </svg>
+                    </a>
+                    <a href=""
+                        class="social-icon w-12 h-12 rounded-[50%] border-[1.5px] border-[#3C73A7] flex items-center justify-center ">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.0134 4.6468C0.518145 4.18697 0.271851 3.6178 0.271851 2.94058C0.271851 2.26335 0.519462 1.66912 1.0134 1.20797C1.50865 0.748149 2.14616 0.517578 2.92724 0.517578C3.70832 0.517578 4.32081 0.748149 4.81475 1.20797C5.31 1.6678 5.5563 2.24622 5.5563 2.94058C5.5563 3.63493 5.30869 4.18697 4.81475 4.6468C4.3195 5.10663 3.6912 5.3372 2.92724 5.3372C2.16329 5.3372 1.50865 5.10663 1.0134 4.6468ZM5.14009 7.28454V21.3824H0.686745V7.28454H5.14009Z"
+                                fill="#3C73A7" />
+                            <path
+                                d="M19.9705 8.67725C20.9415 9.7313 21.4264 11.178 21.4264 13.0199V21.1334H17.1957V13.5917C17.1957 12.6629 16.9546 11.9408 16.4737 11.427C15.9928 10.9132 15.3446 10.6549 14.533 10.6549C13.7214 10.6549 13.0731 10.9118 12.5922 11.427C12.1113 11.9408 11.8702 12.6629 11.8702 13.5917V21.1334H7.6145V7.24509H11.8702V9.08703C12.301 8.47305 12.8821 7.98818 13.612 7.63113C14.3419 7.27407 15.1628 7.09619 16.0758 7.09619C17.7017 7.09619 19.0008 7.62321 19.9705 8.67725Z"
+                                fill="#3C73A7" />
+                        </svg>
+
+                    </a>
+                    <a href=""
+                        class="social-icon w-12 h-12 rounded-[50%] border-[1.5px] border-[#3C73A7] flex items-center justify-center ">
+                        <svg width="14" height="27" viewBox="0 0 14 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.21747 6.37628V10.0419H13.7508L13.0329 14.9798H9.21747V26.3565C8.45249 26.4626 7.66983 26.518 6.87539 26.518C5.95835 26.518 5.05782 26.4449 4.18087 26.3034V14.9798H0V10.0419H4.18087V5.55684C4.18087 2.77428 6.43573 0.517578 9.21865 0.517578V0.519939C9.2269 0.519939 9.23397 0.517578 9.24222 0.517578H13.7519V4.7881H10.8052C9.92941 4.7881 9.21865 5.49906 9.21865 6.3751L9.21747 6.37628Z"
+                                fill="#3C73A7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h5 class="text-[#121212] text-[20px] font-[600]">Contact Us Through</h5>
+                <a href="" class="flex items-center gap-4">
+                    <span
+                        class="social-icon w-12 h-12 rounded-[50%] border-[1.5px] border-[#3C73A7] flex items-center justify-center ">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 7.0376V17.0376C20 21.0376 19 22.0376 15 22.0376H9C5 22.0376 4 21.0376 4 17.0376V7.0376C4 3.0376 5 2.0376 9 2.0376H15C19 2.0376 20 3.0376 20 7.0376Z"
+                                stroke="#3C73A7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14 5.5376H10" stroke="#3C73A7" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M12 19.1376C12.8561 19.1376 13.55 18.4436 13.55 17.5876C13.55 16.7316 12.8561 16.0376 12 16.0376C11.144 16.0376 10.45 16.7316 10.45 17.5876C10.45 18.4436 11.144 19.1376 12 19.1376Z"
+                                stroke="#3C73A7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="text-[#737373] text-[14px] font-[400]">0000000000000</span>
+                </a>
+                <a href="" class="flex items-center gap-4">
+                    <span
+                        class="social-icon w-12 h-12 rounded-[50%] border-[1.5px] border-[#3C73A7] flex items-center justify-center ">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.68994 19.0376H8.18994C4.18994 19.0376 2.18994 18.0376 2.18994 13.0376V8.0376C2.18994 4.0376 4.18994 2.0376 8.18994 2.0376H16.1899C20.1899 2.0376 22.1899 4.0376 22.1899 8.0376V13.0376C22.1899 17.0376 20.1899 19.0376 16.1899 19.0376H15.6899C15.3799 19.0376 15.0799 19.1876 14.8899 19.4376L13.3899 21.4376C12.7299 22.3176 11.6499 22.3176 10.9899 21.4376L9.48994 19.4376C9.32994 19.2176 8.95994 19.0376 8.68994 19.0376Z"
+                                stroke="#3C73A7" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16.1864 11.0376H16.1954" stroke="#3C73A7" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12.1854 11.0376H12.1944" stroke="#3C73A7" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8.18445 11.0376H8.19343" stroke="#3C73A7" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="text-[#737373] text-[14px] font-[400]">rightdecisionsa.com</span>
+                </a>
+                <a href="" class="flex items-center gap-4">
+                    <span
+                        class="social-icon w-12 h-12 rounded-[50%] border-[1.5px] border-[#3C73A7] flex items-center justify-center">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 19.8333C16.1421 19.8333 19.5 16.4754 19.5 12.3333C19.5 8.19118 16.1421 4.83331 12 4.83331C7.85786 4.83331 4.5 8.19118 4.5 12.3333C4.5 16.4754 7.85786 19.8333 12 19.8333Z"
+                                stroke="#3C73A7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M12 15.3333C13.6569 15.3333 15 13.9902 15 12.3333C15 10.6765 13.6569 9.33331 12 9.33331C10.3431 9.33331 9 10.6765 9 12.3333C9 13.9902 10.3431 15.3333 12 15.3333Z"
+                                stroke="#3C73A7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 4.33331V2.33331" stroke="#3C73A7" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M4 12.3333H2" stroke="#3C73A7" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 20.3333V22.3333" stroke="#3C73A7" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M20 12.3333H22" stroke="#3C73A7" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                    </span>
+                    <span class="text-[#737373] text-[14px] font-[400] w-3/4">Anas Bin Malik Road, Al-Malqa, Riyadh
+                        City, Kingdom of Saudi Arabia</span>
+                </a>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <h5 class="text-[#121212] text-[20px] font-[600]">Our Working Hours</h5>
+                <span class="text-[#737373] text-[14px] font-[400]">Saturday to Thursday</span>
+                <a href="employment.html" class="text-[#3C73A7] text-[14px] font-[400] w-3/4">Employment</a>
+            </div>
+
+        </div>
+
+        <div class="w-full p-3 border-t border-[#E7E8E9] flex justify-center ">
+            <span class="text-[#737373] text-[14px] font-[400]">All Rights Reserved The Right Decision © 2025</span>
+        </div>
+
+    </footer>
+
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Start Slick -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"
+        integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/counter.min.js"></script>
+    <script src="../assets/js/jquery.easing.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../assets/js/script-rtl.js" defer></script>
+
+    <script>
+
+        const loader = document.querySelector('.loading');
+
+        // Wait for all content and images to load
+        window.addEventListener('load', () => {
+            // Add fade-out effect
+            loader.style.opacity = '0';
+            loader.style.transition = 'opacity 0.5s ease-out';
+
+            // Remove loader after fade
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        });
+
+
+    </script>
+
+</body>
+
+</html>
+
+</html>

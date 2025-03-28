@@ -120,21 +120,36 @@
 
     <header class="bg-white">
         <nav
-            class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl flex justify-between items-center py-4 relative">
-            <a href="home.html" class="w-full lg:w-auto ">
-                <img src="../assets/images/logo.png" alt="logo" class="w-[140px] md:w-[160px]">
+            class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl flex justify-between items-center py-4 gap-4 relative">
+            <a href="home.html" class="w-full lg:w-auto">
+                <img src="../assets/images/logo.png" alt="logo" class="w-[140px]">
             </a>
 
             <!-- Navigation Links - Desktop -->
-            <ul class="hidden lg:flex gap-4">
-                <li>
-                    <a href="home.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link active">الرئيسية</a>
+            <ul class="hidden lg:flex gap-4 pt-3">
+                <li class="flex justify-center items-center">
+                    <a href="home.html" class="text-[15px] text-[#00386C] font-[400] pb-3 px-1 nav-link active">الرئيسية</a>
                 </li>
-                <li>
-                    <a href="who-we-are.html" class="text-[16px] text-[#00386C] font-[400] pb-3 px-2 nav-link">معلومات عنا</a>
+                <li class="flex justify-center items-center">
+                    <a href="who-we-are.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">من نحن</a>
                 </li>
-                <li>
-                    <a href="templates.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link">لوريم ايبسوم</a>
+                <li class="flex justify-center items-center">
+                    <a href="our-services.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">خدماتنا</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="our-products.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">منتجاتنا</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="publications.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">إصداراتنا</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="training.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">برامج التدريب </a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="news.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">الاخبار</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="blogs.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">المدونة</a>
                 </li>
             </ul>
 
@@ -158,13 +173,12 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="lang-dropdown text-center">
-                        <a href="home.html" class="lang-option" data-lang="ar">عربي</a>
-                        <a href="../home.html" class="lang-option" data-lang="en">ENG</a>
+                        <a href="home.html" class="cursor-pointer lang-option" data-lang="ar">عربي</a>
+                        <a href="../home.html" class="cursor-pointer lang-option" data-lang="en">ENG</a>
                     </div>
                 </div>
                 <a href="contact-us.html"
-                    class="bg-transparent hidden md:block cursor-pointer text-[18px] font-[400] border border-[#00386C] text-[#00386C] px-5 py-2 w-[130px] text-center rounded-md hover:bg-[#00386C] hover:text-white transition-all duration-300">تواصل
-                    معنا</a>
+                    class="bg-transparent hidden lg:block cursor-pointer text-[16px] font-[400] border border-[#00386C] text-[#00386C] px-4 py-2 w-[120px] text-center rounded-md hover:bg-[#00386C] hover:text-white transition-all duration-300">تواصل بنا</a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -183,7 +197,7 @@
 
             <!-- Mobile Menu - Hidden by default -->
             <div
-                class="mobile-menu fixed inset-0 bottom-[30vh] bg-white transform -translate-y-full transition-transform duration-300 ease-in-out lg:hidden z-[9999]">
+                class="mobile-menu fixed inset-0 bg-white transform -translate-y-[200%] transition-transform duration-300 ease-in-out lg:hidden z-[9999]">
                 <div class="bg-white ">
                     <div
                         class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-4 flex justify-between items-center mb-8">
@@ -210,12 +224,12 @@
                                         <path d="M3 9C8.84 7.05 15.16 7.05 21 9" stroke="#121212" stroke-width="1.5"
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                    <span class="current-lang text-[16px] text-[#121212]">ENG</span>
+                                    <span class="current-lang text-[16px] text-[#121212]">عربي</span>
                                     <i class="fas fa-chevron-down"></i>
                                 </button>
                                 <div class="lang-dropdown text-center">
-                                    <a href="home.html" class="lang-option" data-lang="ar">عربي</a>
-                                    <a href="../home.html" class="lang-option" data-lang="en">ENG</a>
+                                    <a href="home.html" class="cursor-pointer lang-option" data-lang="ar">عربي</a>
+                                    <a href="../home.html" class="cursor-pointer lang-option" data-lang="en">ENG</a>
                                 </div>
                             </div>
                             <button class="cursor-pointer mobile-menu-close text-[#00386C]">
@@ -232,19 +246,32 @@
                     </div>
                     <ul class="flex flex-col justify-center items-center gap-6">
                         <li class="pb-4">
-                            <a href="home.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link active">Home
-                                Page</a>
+                            <a href="home.html" class="text-[16px] text-[#00386C] font-[400] pb-4 px-2 nav-link active">الرئيسية</a>
                         </li>
                         <li class="pb-4">
-                            <a href="who-we-are.html" class="text-[16px] text-[#00386C] font-[400] pb-4 px-2 nav-link">About Us</a>
+                            <a href="who-we-are.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link ">من نحن</a>
                         </li>
                         <li class="pb-4">
-                            <a href="templates.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link">Lorem ipsom</a>
+                            <a href="our-services.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">خدماتنا</a>
                         </li>
-                        <li>
+                        <li class="pb-4">
+                            <a href="our-products.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">منتجاتنا</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="publications.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">إصداراتنا</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="training.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">برامج تدريب</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="news.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">الاخبار</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="blogs.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">المدونة</a>
+                        </li>
+                        <li class="pb-4">
                             <a href="contact-us.html"
-                                class="bg-transparent w-max cursor-pointer text-[18px] font-[400] border border-[#00386C] text-[#00386C] px-5 py-2 rounded-md hover:bg-[#00386C] hover:text-white transition-all duration-300">Contact
-                                Us</a>
+                                class="bg-transparent w-max cursor-pointer text-[18px] font-[400] border border-[#00386C] text-[#00386C] px-5 py-2 rounded-md hover:bg-[#00386C] hover:text-white transition-all duration-300">تواصل معنا</a>
                         </li>
                     </ul>
 
@@ -1201,36 +1228,36 @@
     </div>
 
 
-        <!-- Our Clients -->
-        <div class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-12">
-            <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4" data-aos="fade-right"
-                data-aos-offset="100">شركاؤنا</h2>
-            <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-12" data-aos="fade-left"
-                data-aos-offset="100">مجموعة متميزة من العملاء
-                من القطاعين الحكومي والخاص والأفراد</p>
-    
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-    
-                <img src="../assets/images/client 1.png" alt="" data-aos="fade-up" data-aos-offset="100">
-                <img src="../assets/images/client 2.png" alt="" data-aos="fade-up" data-aos-offset="100">
-                <img src="../assets/images/client 3.png" alt="" data-aos="fade-up" data-aos-offset="100">
-                <img src="../assets/images/client 4.png" alt="" data-aos="fade-up" data-aos-offset="100">
-                <img src="../assets/images/client 5.png" alt="" data-aos="fade-up" data-aos-offset="100">
-                <img src="../assets/images/client 6.png" alt="" data-aos="fade-up" data-aos-offset="100">
-                <img src="../assets/images/client 7.png" alt="" data-aos="fade-up" data-aos-offset="100">
-                <img src="../assets/images/client 8.png" alt="" data-aos="fade-up" data-aos-offset="100">
-                <img src="../assets/images/client 9.png" alt="" data-aos="fade-up" data-aos-offset="100">
-                <img src="../assets/images/client 10.png" alt="" data-aos="fade-up" data-aos-offset="100">
-    
-            </div>
-    
-            <div class="w-full flex justify-center items-center mt-12" data-aos="fade-up" data-aos-offset="100">
-                <button
-                    class="cursor-pointer bg-[#00386C] text-[#fff] text-[18px] font-[400] px-12 py-3 rounded-[8px] hover:bg-[#002241] hover:text-white transition-all duration-300">ابدأ
-                    رحلتك
-                    الآن</button>
-            </div>
+    <!-- Our Clients -->
+    <div class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-12">
+        <h2 class="text-[#002241] text-[40px] font-[500] leading-[40px] text-center mb-4" data-aos="fade-right"
+            data-aos-offset="100">شركاؤنا</h2>
+        <p class="text-[#002241] text-[18px] font-[400] leading-[30px] text-center mb-12" data-aos="fade-left"
+            data-aos-offset="100">مجموعة متميزة من العملاء
+            من القطاعين الحكومي والخاص والأفراد</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+
+            <img src="../assets/images/client 1.png" alt="" data-aos="fade-up" data-aos-offset="100">
+            <img src="../assets/images/client 2.png" alt="" data-aos="fade-up" data-aos-offset="100">
+            <img src="../assets/images/client 3.png" alt="" data-aos="fade-up" data-aos-offset="100">
+            <img src="../assets/images/client 4.png" alt="" data-aos="fade-up" data-aos-offset="100">
+            <img src="../assets/images/client 5.png" alt="" data-aos="fade-up" data-aos-offset="100">
+            <img src="../assets/images/client 6.png" alt="" data-aos="fade-up" data-aos-offset="100">
+            <img src="../assets/images/client 7.png" alt="" data-aos="fade-up" data-aos-offset="100">
+            <img src="../assets/images/client 8.png" alt="" data-aos="fade-up" data-aos-offset="100">
+            <img src="../assets/images/client 9.png" alt="" data-aos="fade-up" data-aos-offset="100">
+            <img src="../assets/images/client 10.png" alt="" data-aos="fade-up" data-aos-offset="100">
+
         </div>
+
+        <div class="w-full flex justify-center items-center mt-12" data-aos="fade-up" data-aos-offset="100">
+            <button
+                class="cursor-pointer bg-[#00386C] text-[#fff] text-[18px] font-[400] px-12 py-3 rounded-[8px] hover:bg-[#002241] hover:text-white transition-all duration-300">ابدأ
+                رحلتك
+                الآن</button>
+        </div>
+    </div>
 
     <!-- Our Clients -->
     <div class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-12">

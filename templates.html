@@ -120,22 +120,36 @@
 
     <header class="bg-white">
         <nav
-            class="max-w-[90%] mx-auto sm:max-w-xl lg:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl flex justify-between items-center py-4 relative">
+            class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl flex justify-between items-center py-4 gap-4 relative">
             <a href="home.html" class="w-full lg:w-auto">
-                <img src="../assets/images/logo.png" alt="logo" class="w-[140px] lg:w-[160px]">
+                <img src="../assets/images/logo.png" alt="logo" class="w-[140px]">
             </a>
 
             <!-- Navigation Links - Desktop -->
-            <ul class="hidden lg:flex gap-4">
-                <li>
-                    <a href="home.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link">Home Page</a>
+            <ul class="hidden lg:flex gap-4 pt-3">
+                <li class="flex justify-center items-center">
+                    <a href="home.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link">Home</a>
                 </li>
-                <li>
-                    <a href="who-we-are.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link">About
-                        Us</a>
+                <li class="flex justify-center items-center">
+                    <a href="who-we-are.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">About Us</a>
                 </li>
-                <li>
-                    <a href="templates.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link">Lorem ipsom</a>
+                <li class="flex justify-center items-center">
+                    <a href="our-services.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">Services</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="our-products.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">Products</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="publications.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">Publications</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="training.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">Training</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="news.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">News</a>
+                </li>
+                <li class="flex justify-center items-center">
+                    <a href="blogs.html" class="text-[15px] text-[#5C5C5C] font-[400] pb-3 px-1 nav-link ">Blogs</a>
                 </li>
             </ul>
 
@@ -164,7 +178,7 @@
                     </div>
                 </div>
                 <a href="contact-us.html"
-                    class="bg-transparent hidden lg:block cursor-pointer text-[18px] font-[400] border border-[#00386C] text-[#00386C] px-5 py-2 rounded-md hover:bg-[#00386C] hover:text-white transition-all duration-300">Contact
+                    class="bg-transparent hidden lg:block cursor-pointer text-[16px] font-[400] border border-[#00386C] text-[#00386C] px-4 py-2 w-[120px] text-center rounded-md hover:bg-[#00386C] hover:text-white transition-all duration-300">Contact
                     Us</a>
             </div>
 
@@ -184,10 +198,10 @@
 
             <!-- Mobile Menu - Hidden by default -->
             <div
-                class="mobile-menu fixed inset-0 bottom-[30vh] bg-white transform -translate-y-full transition-transform duration-300 ease-in-out lg:hidden z-[9999]">
+                class="mobile-menu fixed inset-0 bg-white transform -translate-y-[200%] transition-transform duration-300 ease-in-out lg:hidden z-[9999]">
                 <div class="bg-white ">
                     <div
-                        class="max-w-[90%] mx-auto sm:max-w-xl lg:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-4 flex justify-between items-center mb-8">
+                        class="max-w-[90%] mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl py-4 flex justify-between items-center mb-8">
                         <a href="home.html" class="w-full lg:w-auto block lg:hidden">
                             <img src="../assets/images/logo.png" alt="logo" class="w-[140px]">
                         </a>
@@ -215,8 +229,7 @@
                                     <i class="fas fa-chevron-down"></i>
                                 </button>
                                 <div class="lang-dropdown text-center">
-                                    <a href="ar/templates.html" class="cursor-pointer lang-option"
-                                        data-lang="ar">عربي</a>
+                                    <a href="ar/templates.html" class="cursor-pointer lang-option" data-lang="ar">عربي</a>
                                     <a href="templates.html" class="cursor-pointer lang-option" data-lang="en">ENG</a>
                                 </div>
                             </div>
@@ -234,18 +247,30 @@
                     </div>
                     <ul class="flex flex-col justify-center items-center gap-6">
                         <li class="pb-4">
-                            <a href="home.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link">Home
-                                Page</a>
+                            <a href="home.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link">Home</a>
                         </li>
                         <li class="pb-4">
-                            <a href="who-we-are.html"
-                                class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link">About Us</a>
+                            <a href="who-we-are.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link ">About Us</a>
                         </li>
                         <li class="pb-4">
-                            <a href="templates.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-4 px-2 nav-link ">Lorem
-                                ipsom</a>
+                            <a href="our-services.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">Service</a>
                         </li>
-                        <li>
+                        <li class="pb-4">
+                            <a href="our-products.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">Products</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="publications.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">Publications</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="training.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">Training</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="news.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">News</a>
+                        </li>
+                        <li class="pb-4">
+                            <a href="blogs.html" class="text-[16px] text-[#5C5C5C] font-[400] pb-3 px-2 nav-link ">Blogs</a>
+                        </li>
+                        <li class="pb-4">
                             <a href="contact-us.html"
                                 class="bg-transparent w-max cursor-pointer text-[18px] font-[400] border border-[#00386C] text-[#00386C] px-5 py-2 rounded-md hover:bg-[#00386C] hover:text-white transition-all duration-300">Contact
                                 Us</a>

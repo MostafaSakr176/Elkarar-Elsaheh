@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const backdrop = document.querySelector('.backdrop');
 
     function openMobileMenu() {
-        mobileMenu.classList.remove('-translate-y-full');
+        mobileMenu.classList.remove('-translate-y-[200%]');
         backdrop.classList.remove('opacity-0', 'pointer-events-none');
         document.body.style.overflow = 'hidden';
     }
 
     function closeMobileMenu() {
-        mobileMenu.classList.add('-translate-y-full');
+        mobileMenu.classList.add('-translate-y-[200%]');
         backdrop.classList.add('opacity-0', 'pointer-events-none');
         document.body.style.overflow = '';
     }
