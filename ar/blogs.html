@@ -643,7 +643,7 @@
                         });
 
                         const blogCard = `
-                        <div
+                        <div onclick="handleBlogId(${blog.id})" 
                 class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                 <div class="relative rounded-xl overflow-hidden">
                     <img src="${blog.image}" alt="${blog.title}" class="w-full h-48 object-cover">
@@ -709,6 +709,14 @@
 
         // Call fetchBlogs when document is ready
         document.addEventListener('DOMContentLoaded', fetchBlogs);
+
+
+        async function handleBlogId(id){
+            console.log(id);
+            await localStorage.setItem("BlogID",id)
+            window.location.href = "/ar/blog-details.html";
+        }
+
 
     </script>
 

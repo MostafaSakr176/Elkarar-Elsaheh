@@ -102,6 +102,7 @@ body{
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     min-width: 120px;
     display: none;
+    overflow: hidden;
 }
 
 .language-selector:hover .lang-dropdown {
@@ -455,11 +456,10 @@ body{
 /* contact us */
 
 .left-side {
-    padding: 0.5px 0.5px 1px 1px;
+    padding: 1px;
     border-radius: 12px;
     background: linear-gradient(270deg, #2194F3 0%, #1157C8 100%);
     overflow: hidden;
-
 }
 
 

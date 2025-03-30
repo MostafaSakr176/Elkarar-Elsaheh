@@ -698,7 +698,7 @@
                         });
 
                         const newsCard = `
-                    <div
+                    <div onclick="handleNewId(${news.id})"
             class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
             <div class="relative rounded-xl overflow-hidden">
                 <img src="${news.image}" alt="${news.title}" class="w-full h-48 object-cover">
@@ -762,9 +762,16 @@
         }
 
 
-
         // Call fetchNews when document is ready
         document.addEventListener('DOMContentLoaded', fetchNews);
+
+
+
+        async function handleNewId(id){
+            console.log(id);
+            await localStorage.setItem("NewID",id)
+            window.location.href = "/new-details.html";
+        }
     </script>
 
 </body>
