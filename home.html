@@ -352,7 +352,7 @@
                 businesses develop and enhance their relationships with customers through innovative solutions based on
                 the latest market trends.</p>
             <a href="who-we-are.html" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200"
-                class="cursor-pointer bg-[#00386C] text-[#fff] text-[18px] font-[400] px-12 py-3 rounded-[8px] hover:bg-[#002241] hover:text-white transition-all duration-300">More
+                class="cursor-pointer inline-block bg-[#00386C] text-[#fff] text-[18px] font-[400] px-12 py-3 rounded-[8px] hover:bg-[#002241] hover:text-white transition-all duration-300">More
                 details</a>
         </div>
         <div>
@@ -900,21 +900,21 @@
 
         <div class="our-editions" data-aos="fade-up" data-aos-offset="100">
 
-            <a href="templates.html">
+            <a href="templates.html" class="cursor-pointer">
                 <img class="h-[300px] mx-auto mb-8 object-contain transition-all duration-400 hover:scale-[1.03] hover:shadow-2xl hover:shadow-gray-400/50"
                     src="../assets/images/إصدارتنا 1.png" alt="">
                 <p class="text-[20px] text-[#002241] text-center font-[600] leading-[32px]">Customer Experience Book
                     for Strategic Planning and Measuring Impact and Performance Indicators</p>
             </a>
 
-            <a href="templates.html">
+            <a href="templates.html" class="cursor-pointer">
                 <img class="h-[300px] mx-auto mb-8 object-contain transition-all duration-400 hover:scale-[1.03] hover:shadow-2xl hover:shadow-gray-400/50"
                     src="../assets/images/إصدارتنا 3.png" alt="">
                 <p class="text-[20px] text-[#002241] text-center font-[600] leading-[32px]">User Experience Design
                     Book According to Design Thinking Methodology</p>
             </a>
 
-            <a href="templates.html">
+            <a href="templates.html" class="cursor-pointer">
                 <img class="h-[300px] mx-auto mb-8 object-contain transition-all duration-400 hover:scale-[1.03] hover:shadow-2xl hover:shadow-gray-400/50"
                     src="../assets/images/إصدارتنا 2.png" alt="">
                 <p class="text-[20px] text-[#002241] text-center font-[600] leading-[32px]">Customer Experience Book
@@ -1878,7 +1878,7 @@
 
                     data.data.forEach(banner => {
 
-                        const blogCard = `
+                        const bannerCard = `
                         <div class="relative h-full w-full">
                 <!-- Dark overlay -->
                 <div class="absolute inset-0 bg-black/70 z-[1]"></div>
@@ -1896,7 +1896,7 @@
                         `;
 
                         // Add the blog card to all containers
-                        BannersContainer.innerHTML += blogCard;
+                        BannersContainer.innerHTML += bannerCard;
 
                     });
 
@@ -2022,7 +2022,7 @@
 
                         const newsCard = `
                     <div
-            class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+            class="cursor-pointer p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
             <div class="relative rounded-xl overflow-hidden">
                 <img src="${news.image}" alt="${news.title}" class="w-full h-48 object-cover">
                 <div
@@ -2164,7 +2164,7 @@
 
                         const blogCard = `
                         <div
-                class="p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                class="cursor-pointer p-3 rounded-xl border border-[#86BDF0] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                 <div class="relative rounded-xl overflow-hidden">
                     <img src="${blog.image}" alt="${blog.title}" class="w-full h-48 object-cover">
                     <div

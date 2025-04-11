@@ -527,13 +527,14 @@
 
                         const blogCard = `<div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
                                 <div class="col-span-2 lg:col-span-3 order-2 lg:order-1">
-                                    <h2 class="text-[#002241] text-[24px] md:text-[30px] font-[700]"
+                                    ${data.data.pdf ? `<a href="${data.data.pdf}" target="_blank" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200"
+                                        class="w-full lg:w-auto cursor-pointer bg-[#00386C] text-[#fff] text-[18px] font-[400] px-12 py-2 rounded-[8px] hover:bg-[#002241] hover:text-white transition-all duration-300">Download PDF</a>`:""}
+                                    <h2 class="mt-8 text-[#002241] text-[24px] md:text-[30px] font-[700]"
                                         data-aos="fade-up" data-aos-offset="100">${data.data.title}</h2>
                                     <span class="text-[#121212] text-[12px] md:text-[14px] font-[400]">${date}</span>
-                                    <p class="text-[#121212] text-[16px] md:text-[18px] font-[400] leading-[28px] mt-6 mb-12"
+                                    <p class="text-[#121212] text-[16px] md:text-[18px] font-[400] leading-[28px] mt-6"
                                         data-aos="fade-up" data-aos-offset="100">${data.data.content}</p>
-                                    <a href="${data.data.pdf}" target="_blank" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200"
-                                        class="w-full lg:w-auto cursor-pointer bg-[#00386C] text-[#fff] text-[18px] font-[400] px-12 py-3 rounded-[8px] hover:bg-[#002241] hover:text-white transition-all duration-300">Download PDF</a>
+                                    
                                 </div>
 
                                 <div class="col-span-2 flex flex-col order-1 lg:order-2 items-center justify-center gap-3">
