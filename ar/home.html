@@ -1847,8 +1847,9 @@
                     class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-full text-center flex flex-col gap-8 items-center justify-center z-[2] w-[90%] mx-auto md:max-w-1xl lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl">
                     <h1 class="md:text-[48px] text-[24px] text-[#fff] font-[600] md:leading-[56px] leading-[32px]">${banner.title}</h1>
                     <p class="md:text-[18px] text-[14px] text-[#fff] font-[400] md:leading-[28px] leading-[20px]">${banner.content}</p>
-                    <a href="" 
-                        class="bg-[#00386C] cursor-pointer text-white md:text-[24px] text-[18px] font-[400] md:leading-[36px] leading-[24px] border border-[#86BDF0] px-6 py-3 rounded-[12px] hover:bg-[#002241] hover:text-white transition-all duration-300">اكتشف خدماتنا</a>
+                    ${banner.link_label ? `<a href="${banner.link_label}" 
+                        class="bg-[#00386C] cursor-pointer text-white md:text-[24px] text-[18px] font-[400] md:leading-[36px] leading-[24px] border border-[#86BDF0] px-6 py-3 rounded-[12px] hover:bg-[#002241] hover:text-white transition-all duration-300">Discover
+                        ${banner.label}</a>` : ""}
                 </div>
             </div>
                         `;
